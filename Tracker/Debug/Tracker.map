@@ -1,0 +1,129 @@
+******************************************************************************
+            TI ARM Clang Linker PC v2.1.2                      
+******************************************************************************
+>> Linked Tue Nov 29 16:28:10 2022
+
+OUTPUT FILE NAME:   <Tracker.out>
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 00000021
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  RAM                   00000020   ffffffe0  00000838  fffff7a8  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000020    00000020    00000038   00000038    r-x
+  00000020    00000020    00000038   00000038    r-x .text
+00000058    00000058    00000800   00000000    rw-
+  00000058    00000058    00000800   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    00000020    00000038     
+                  00000020    0000002c     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs)
+                  0000004c    00000004            : pre_init.c.obj (.text._system_pre_init)
+                  00000050    00000004     main.o (.text.main)
+                  00000054    00000004     libc.a : exit.c.obj (.text:abort)
+
+.cinit     0    00000020    00000000     
+
+.init_array 
+*          0    00000020    00000000     UNINITIALIZED
+
+__llvm_prf_cnts 
+*          0    00000020    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    00000020    00000000     UNINITIALIZED
+
+.stack     0    00000058    00000800     UNINITIALIZED
+                  00000058    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  0000005c    000007fc     --HOLE--
+
+MODULE SUMMARY
+
+       Module                code   ro data   rw data
+       ------                ----   -------   -------
+    .\
+       main.o                4      0         0      
+    +--+---------------------+------+---------+---------+
+       Total:                4      0         0      
+                                                     
+    D:\MyPrograms\ccs\tools\compiler\ti-cgt-armllvm_2.1.2.LTS\lib\armv7em-ti-none-eabihf/c/libc.a
+       boot_cortex_m.c.obj   44     0         0      
+       exit.c.obj            4      0         0      
+       pre_init.c.obj        4      0         0      
+    +--+---------------------+------+---------+---------+
+       Total:                52     0         0      
+                                                     
+       Stack:                0      0         2048   
+    +--+---------------------+------+---------+---------+
+       Grand Total:          56     0         2048   
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                   
+-------   ----                   
+00000054  C$$EXIT                
+00000858  __STACK_END            
+00000800  __STACK_SIZE           
+00000020  __TI_CINIT_Base        
+00000020  __TI_CINIT_Limit       
+00000020  __TI_CINIT_Warm        
+ffffffff  __TI_pprof_out_hndl    
+ffffffff  __TI_prof_data_size    
+ffffffff  __TI_prof_data_start   
+00000020  __TI_static_base__     
+ffffffff  __binit__              
+UNDEFED   __mpu_init             
+00000058  __stack                
+00000020  __start___llvm_prf_bits
+00000020  __start___llvm_prf_cnts
+00000020  __stop___llvm_prf_bits 
+00000020  __stop___llvm_prf_cnts 
+00000021  _c_int00_noinit_noargs 
+0000004d  _system_pre_init       
+00000055  abort                  
+ffffffff  binit                  
+00000051  main                   
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                   
+-------   ----                   
+00000020  __TI_CINIT_Base        
+00000020  __TI_CINIT_Limit       
+00000020  __TI_CINIT_Warm        
+00000020  __TI_static_base__     
+00000020  __start___llvm_prf_bits
+00000020  __start___llvm_prf_cnts
+00000020  __stop___llvm_prf_bits 
+00000020  __stop___llvm_prf_cnts 
+00000021  _c_int00_noinit_noargs 
+0000004d  _system_pre_init       
+00000051  main                   
+00000054  C$$EXIT                
+00000055  abort                  
+00000058  __stack                
+00000800  __STACK_SIZE           
+00000858  __STACK_END            
+ffffffff  __TI_pprof_out_hndl    
+ffffffff  __TI_prof_data_size    
+ffffffff  __TI_prof_data_start   
+ffffffff  __binit__              
+ffffffff  binit                  
+UNDEFED   __mpu_init             
+
+[22 symbols]

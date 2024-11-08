@@ -1,0 +1,5 @@
+"./Clock.o"
+"./Motor.o"
+"./PWM.o"
+"./main.o"
+"../msp432p401r.cmd"
